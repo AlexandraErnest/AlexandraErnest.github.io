@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+    
+<head>
+	<title>Contact Page</title>
+  <!--Link to Google Fonts Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+	<!--Link to external CSS -->
+	<link href="css/navbar.css" rel="stylesheet" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js"></script>
+	<!-- Meta tag to make this a responsive web page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+
+</head>
+<body class="body1">
+  <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <div class="dropdown">
+              <button class="dropbtn">Homework 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="shows_page.html">Shows</a>
+                <a href="travel_page.html">Travel</a>
+                <a href="web poem.html">Web Poem</a>
+                <a href="nav-bar-test.html">Testing</a>
+				        <a href="grids_page.html">Grid HW</a>
+              </div>
+            </div> 
+            <a href="#about">About Me</a>
+            <a href="contact.html">Contact</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+
+        <h1>Contact Me!</h1>
+
+        <div class="container2">
+            <form action="mailto:alexandra.ernest49@myhunter.cuny.edu?subject=Inquiry" target="_blank" method="post" enctype="text/plain">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Email..">
+              <label for="reason">How'd you find me?</label>
+              <select id="reason" name="reason">
+                <option value="usa">School</option>
+                <option value="australia">Friend</option>
+                <option value="canada">Secret Society</option>
+                <option value="other">Other...</option>
+              </select>
+              <label for="subject">Reason for Contact</label>
+              <textarea id="subject" name="subject" placeholder="Need to tell me something..." style="height:100px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+    </body>
+</html>
