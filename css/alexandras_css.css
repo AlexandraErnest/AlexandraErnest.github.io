@@ -1,0 +1,270 @@
+@charset "UTF-8";
+
+* {
+	/*padding: 0;*/
+	/*margin: 0;*/
+	/*box-sizing: border-box;*/
+	font-family: "Lucida Console", "Courier New", monospace;
+}
+
+body {
+	font-family: "Lucida Console", "Courier New", monospace;
+	background-color: #F5F5F7;
+}
+
+h1 {
+	margin: 0px;
+	text-align: center;
+	font-family: "Lucida Console", "Courier New", monospace;
+ 	color:#85778D;		
+	font-size: 42px;
+}
+
+table, th, td {
+  border:1px solid black;
+  width: auto;
+}
+
+.listing{
+    margin-left: 50px;
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 25px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color:#85778D;
+}
+
+.p1 {
+	font-family: "Lucida Console", "Courier New", monospace;
+	align: center;
+	color:#6F6F6F;
+}
+.allImages{
+	border-width: 2px;
+	border-radius: 25px;
+	width: 40px; 
+	height: 40px;
+}
+
+.workImages{
+	width:45%;
+}
+
+.showsImagesIcon {
+	border-width: 2px;
+	border-radius: 25px;
+	width: 70px; 
+	height: 100px;
+	display: block;
+}
+
+
+/*Part of Sidenav
+.sidenav {
+	font-family: "Lucida Console", "Courier New", monospace;
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background: url("../images/giffy2.gif");
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+*/
+
+/*Might get rid of sidenav */
+
+
+/*.sidenav a {
+    padding: 6px 5px 10px 10px;
+    font-size: 20px;
+    color: #7373E3;
+    display: block;
+}
+
+/*When you hover over it... 
+.sidenav a:hover {
+	color: #c0c2c9;
+    text-shadow: 5px 5px 3px #ffffff ;
+}*/
+
+
+
+.listing a:hover {
+	color: #c0c2c9;
+    text-shadow: 5px 5px 3px #B6B6B6 ;
+}
+
+/*Link for where I found the shadow effect - https://www.w3schools.com/cssref/pr_text_text-decoration.php */
+
+.main {
+	margin: 50px;
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color:#85778D;
+}
+
+/* source for scroll horizontal- https://www.youtube.com/watch?v=2_E5uoiLCLY */
+.wrapper{
+	margin: 50px;
+	max-height: auto;
+	/* if you want a border - border: double;*/
+	border-width: thick;
+	border-right: auto;
+	display: flex;
+	overflow-x: auto;
+}
+
+/*make number bigger if you want the bottom scroll bar*/
+.wrapper::-webkit-scrollbar{
+	width: 0;
+}
+
+.wrapper .item {
+	min-width: 110px;
+	height: 250px;
+	line-height: 110px;
+	text-align: right;
+	background-color: #ddd;
+	margin-right: 2px;
+	border-radius: 25px;
+}
+
+/* STARTING HERE FROM VIDEO - https://www.youtube.com/watch?v=Oa9LTDR9ugU */
+.container {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/travel-background.jpeg");
+	background-position: center;
+	background-size: cover;
+}
+
+.row {
+	display:block;
+	height: 88%;
+	align-items: center;
+}
+
+.col {
+	flex-basis: 50%;
+}
+
+h2 {
+	color: #fff;
+	font-size: 100px;
+}
+
+p {
+	color: #fff;
+	font-size: 11px;
+	line-height: 15px;
+}
+
+button {
+	width: 180px;
+	color: #000;
+	font-size: 12px;
+	padding: 12px 0;
+	background: #fff;
+	border: 0;
+	border-radius: 20px;
+	outline: none;
+	margin-top: 30px;
+}
+
+.card {
+	width: 200px;
+	height: 230px;
+	display: inline-block;
+	border-radius: 10px;
+	padding: 15px 25px;
+	box-sizing: border-box;
+	cursor: pointer;
+	margin: 10px 15px;
+	background-position: center;
+	background-size: cover;
+	transition: transform 0.5s;
+}
+
+.card1 {
+	background-image: url("../images/place1.webp");
+}
+.card2 {
+	background-image: url("../images/place2.jpeg");
+}
+.card3 {
+	background-image: url("../images/place3.webp");
+}
+.card4 {
+	background-image: url("../images/place4.webp");
+}
+
+.card:hover {
+	transform: translateY(-10px);
+}
+
+h5 {
+	color: #fff;
+	text-shadow: 0 0 5px #999;
+}
+
+.card p {
+	text-shadow: 0 0 15px #000;
+	font-size: 8px;
+}
+
+/*HAMBURGER MENU STUFF WHEN WINDOW RESIZES*/
+.navbar {
+	min-height: 70px;
+	display: flex;
+	justify-content:left; /*I changed this from space between to left so that the nav bars on the left*/
+	align-items: center;
+	padding: 0 24px;
+}
+
+.nav-menu {
+	display: block; /*I changed this from flex to block so I could see my dropdown menu*/
+	justify-content: space-between;
+	align-items: center;
+	gap: 60px;
+}
+
+.hamburger {
+	display: none;
+	cursor: pointer;
+}
+
+.bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: white;
+}
+
+header {
+	background-color: #777777;
+}
+
+
+
+/*SIDEBAR FROM W3 Schools Link - https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp (I did auto height)*/
+
+@media (max-width: 700px) {
+	body {background-color: #230053;}
+	video{text-align: center;}
+	.workImages {text-align: center;}
+    /*.sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 15px;}*/
+}
+
+/*reduce screen size to see the change */
+ /*@media (max-width: 600px) {
+    body {background-color: cornflowerblue;}
+    img {display: none;}
+	video {display: none;}
+    .greenDiv {display: none;} 
+} */
