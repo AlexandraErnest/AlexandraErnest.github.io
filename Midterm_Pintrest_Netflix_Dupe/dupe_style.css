@@ -1,0 +1,349 @@
+@charset "UTF-8";
+
+:root {
+    --card_width: 250px;
+    --card_border_radius: 16px;
+    --row_increment : 10px;
+    --card_small: 26;
+    --card_medium: 33;
+    --card_large: 45;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: black;
+    color: black;
+    font-family: "Poppins", sans-serif;
+}
+
+.pin_container {
+    margin: 0;
+    padding: 0;
+    /* width: 90vw; */
+    width: 98%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+
+    background-color: black;
+}
+
+.card {
+    padding: 0px;
+    margin: 15px 10px;
+    border-radius: var(--card_border_radius);
+    background-color: blueviolet;
+    
+}
+
+.card_small {
+    grid-row-end: span var(--card_small);
+}
+
+.card_medium {
+    grid-row-end: span var(--card_medium);
+}
+
+.card_large {
+    grid-row-end: span var(--card_large);
+}
+
+/* Info for photos*/
+
+
+/*Second Video / navbar stuff*/
+
+.header {
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 120px;
+    width: 100%;
+    box-shadow: 0px 0px 10px 5px rgba(255,0,0,0.2);
+    animation: fade-down 0.5s;
+    background-color: #000000;
+}
+
+/* .logo img{
+/* Logo stuff goes here  
+} */
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.search {
+    width: 800px;
+    height: 55px;
+    background: #e4e4e4;
+    border-radius: 80px;
+    padding: 0 20px;
+}
+
+/* .search img{
+/* Logo stuff goes here  
+} */
+
+.search input{
+    border: none;
+    background: transparent;
+    width: 80%;
+    height: 100%;
+    outline: none;
+    padding: 0 10px;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+/* NEWER Pintrest Stuff  Source:https://www.youtube.com/watch?v=vIaduyqHPfY  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container1 {
+    width: 1400px;
+    margin: 20px auto;
+    columns: 4;
+    column-gap: 40px;
+    animation: fade-up 0.5s;
+}
+
+.container1 .box {
+    width: 100%;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+
+.container1 .box img {
+    max-width: 100%;
+    border-radius: 15px;
+    border-width: 5px;
+    border-style:outset;
+    border-color: black;
+    box-shadow: 0 0 2px 2px red;
+}
+
+
+/* Makes the image come out when mouse hovers over it */
+.container1 .box img:hover {
+    transform: scale(1.1);
+    transition: .2s linear;
+}
+
+@media (max-width: 1200px) {
+    .container1 {
+        width: calc(100% - 40px);
+        columns: 3;
+    }
+}
+
+@media (max-width: 760px) {
+    .container1 {
+        columns: 2;
+    }
+}
+/* This part is probably only for mobile users */
+@media (max-width: 480px) {
+    .container1 {
+        columns: 1;
+    }
+}
+
+
+  /* source for scroll horizontal- https://www.youtube.com/watch?v=2_E5uoiLCLY */
+  .wrapper{
+	margin: 20px;
+	max-height: align;
+	/* if you want a border - border: double;*/
+	border-width: thick;
+	border-right: auto;
+	display: flex;
+	overflow-x: auto;
+    animation: fade-up 0.5s;
+}
+
+  /*make number bigger if you want the bottom scroll bar*/
+.wrapper::-webkit-scrollbar{
+	width: 0;
+}
+
+.wrapper .item {
+	min-width: 110px;
+	height: 210px;
+	line-height: 110px;
+	text-align: right;
+	background-color: #ddd;
+	margin-right: 10px;
+	margin-left: 10px;
+    margin-top: 10px;
+	border-radius: 25px;
+    box-shadow: 0 0 2px 2px red;
+}
+
+
+h1 {
+    color: red;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+h2 {
+    color: red;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style:italic;
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+p1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style:italic;
+    color: #ff0000;
+}
+
+.title_home {
+    font-size: 70px;
+    text-align: center;
+    text-shadow: 2px 2px white;
+    text-decoration: underline;
+}
+
+/* Footer Css Below */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #19191b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #FF0000;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+/* Fading in stuff Source - https://www.youtube.com/watch?v=5yl75eM0Y4A*/
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
