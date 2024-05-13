@@ -3,7 +3,7 @@
 <html lang="en">
     
 <head>
-	<title>Web Poem Page</title>
+	<title>Form Page</title>
 	<!--Link to Google Fonts Font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,36 +28,42 @@
                 <a href="travel_page.html">Travel</a>
                 <a href="web poem.html">Web Poem</a>
                 <a href="nav-bar-test.html">Testing</a>
-				<a href="grids_page.html">Grid HW</a>
+				        <a href="grids_page.html">Grid HW</a>
                 <a href="form.html">Javascript Pt.1</a>
-				<a href="Final_Zombie_Apocalypse_Adventure/index.html">Final</a>
+				        <a href="Final_Zombie_Apocalypse_Adventure/index.html">Final</a>
               </div>
             </div> 
             <a href="#about">About Me</a>
             <a href="contact.html">Contact</a>
-			<a href="Midterm_Pintrest_Netflix_Dupe/index.html">Netflix/Pintrest Midterm</a>
+            <a href="Midterm_Pintrest_Netflix_Dupe/index.html">Netflix/Pintrest Midterm</a>
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 		</div>
-		
-		<h1>~Web Poem~</h1>
-		
-		
-	<!--<table>
-			<tr>
-				<td><strong>Watched</strong></td>
-    			<td><strong>Current</strong></td>
-    			<td><strong>Rating</strong></td>
-  			</tr>
-			
-			<tr>
-    <td>Alfreds Futterkiste</td>
-				  </tr>
-			<tr>
-    <td>Maria Anders</td>
-				</tr>
-			<tr>
-    <td>Germany</td>
-  </tr>
-		</table> -->
-    </body>
+        <body>
+            <form action="/action_page.php">
+                <label for="fname">How are you today:</label><br>
+                <input type="text" id="feelings" placeholder="How you doing?"><br>
+                <label for="lname">Name:</label><br>
+                <input type="text" id="Name" placeholder="What's your name?"><br><br>
+            </form> 
+            <button type="button" onClick="sayHello()">Submit</button>
+            
+            <br>
+            <br>
+            
+            <div id="helloDiv">
+            </div>
+            
+            <script>
+            var theDiv = document.getElementById("helloDiv");
+            
+            function sayHello(){
+                var fNameVar = document.getElementById("feelings").value;
+                var lNameVar = document.getElementById("Name").value;
+                theDiv.innerHTML = "Hello " + fNameVar + " " + lNameVar; + "!";
+            }
+        </script>
+        </body>
+  </body>
 </html>
+
+<!--DARK MODE PART FROM W3*/-->
