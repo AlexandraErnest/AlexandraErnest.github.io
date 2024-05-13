@@ -1,0 +1,433 @@
+/* REFERENCE - https://youtu.be/cwC1qdPWBKo?si=V41_eQ4VDO1rAtQJ */
+/* REFERENCE For Ending Screen - https://youtu.be/rxtokBXPk9k?si=unrOgFh7fVh78ouS */
+
+.bodyEnding {
+    background-color: #4C5878;
+}
+
+.bodyEnding2 {
+    background-color: #948069;
+}
+
+.bodyEnding3 {
+    background-color: #8C847C;
+}
+
+.bodyEnding4 {
+    background-color: #BDBEBD;
+}
+
+.bodyEnding5 {
+    background-color: #5F713E;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: descriptionText;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+}
+.title {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 70px;
+}
+.ending-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.image {
+    flex:1;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image img {
+    width: 100%;
+}
+
+.content {
+    flex:1;
+    margin-left: 20px;
+}
+
+.content p {
+    font-size: 25px;
+    line-height: 1.6;
+}
+
+.again {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #203879;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+.again1 {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d2ab69;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.again2 {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5f5246;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.again3 {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #868686;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.again4 {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #59673A;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.again:hover {
+    background-color: #981405;
+}
+
+.again1:hover {
+    background-color: #d8a52c;
+}
+.again2:hover {
+    background-color: #776d55;
+}
+
+.again3:hover {
+    background-color: #646664;
+}
+
+.again4:hover {
+    background-color: #698039;
+}
+
+
+  /* Resize window stuff */
+  @media screen and (max-width: 768px){
+    .ending-content{
+        flex-direction: column;
+    }
+    .image, .content {
+        margin:0;
+        margin-bottom:20px;
+    }
+    .title{
+        font-size: 38px;
+        margin-bottom: 50px;
+    }
+  }
+
+/* ENDING SCREEN CONTENT STOPS HERE */
+
+/* GAME OVER SCREEN CONTENT HERE*/
+.container2 {
+    display: inline-block;
+}
+
+.text{
+    font-size: 7em;
+    color: #fff;
+    letter-spacing: 20px;
+    font-family: descriptionText;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+    typing 2s steps(10),
+    cursor .4s step-end infinite alternate;
+}
+
+.tryAgain {
+    color: white;
+    font-size: 30px;
+}
+
+.deathText{
+    font-size: 28px;
+    color: #fff;
+}
+
+.death1 {    
+    background-image: url("images/death_1.gif");
+    background-size: cover;
+    text-align: center;
+}
+
+/* blinking cursor */
+@keyframes cursor {
+    50% { border-color: transparent;}
+}
+/* typing effect */
+@keyframes typing {
+    from { width: 0}
+}
+
+/* End of game over content */
+
+.body1 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* change the background of the page later as well */
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("images/background_4.jpeg");
+    background-size: cover;
+    overflow: hidden /* Add this back if you want to be able to scroll side to side*/
+    /* overflow: scroll; */
+}
+
+.card {
+
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "stats";
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    text-align: center;
+
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.card-image {
+    grid-area: image;
+    background: url(images/apocalypse_background.webp);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-image1 {
+    grid-area: image;
+    background: url(images/card_img_1.jpeg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-image2 {
+    grid-area: image;
+    background: url(images/card_img_2.jpeg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-image3 {
+    grid-area: image;
+    background: url(images/run_img.jpeg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-image4 {
+    grid-area: image;
+    background: url(images/do_nothing.jpeg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-image5 {
+    grid-area: image;
+    background: url(images/help_img.jpeg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-image6 {
+    grid-area: image;
+    background: url(images/bat_img.jpg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-image7 {
+    grid-area: image;
+    background: url(images/stab_zombie_img.JPG);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-image8 {
+    grid-area: image;
+    background: url(images/manager_img.jpeg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-image9 {
+    grid-area: image;
+    background: url(images/storage_img.jpeg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-image10 {
+    grid-area: image;
+    background: url(images/accompany_img.jpeg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-image11 {
+    grid-area: image;
+    background: url(images/recruit_img.jpeg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-image12 {
+    grid-area: image;
+    background: url(images/50_50_img.jpeg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-image13 {
+    grid-area: image;
+    background: url(images/left_img.webp);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-image14 {
+    grid-area: image;
+    background: url(images/cut_img.webp);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-text{
+    grid-area: text;
+    margin: 25px;
+}
+
+.card-text .date{
+    font-family: descriptionText;
+    color: rgb(151, 13, 20);
+    font-size: 13px;
+}
+
+.card-text p {
+    font-family: descriptionText;
+    color: grey;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.card-text h2 {
+    margin-top: 0px;
+    font-size: 28px;
+}
+
+.card-stats {
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; 
+    background: rgb(151, 13, 20);
+}
+
+.card-stats .stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+}
+
+.card-stats .type {
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: descriptionText;
+}
+
+.card-stats .value {
+    font-family: descriptionText;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card-stats .border {
+    border-left: 1px solid rgb(93, 7, 11);
+    border-right: 1px solid rgb(93, 7, 11);
+}
+/* decide if you want this or not */
+.card-stats .value sup{
+    font-size: 12px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(236, 227, 227, 0.6);
+}
+
+/* Decorate the START link later */
+.a1 {
+    color: #DE5B0B;
+    text-decoration: none;
+  }
+
+a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+.p1 {
+    font-family: descriptionText;
+    font-size: 25px;
+    font-weight: 300;
+    color: rgb(151, 13, 20);
+    /* background: #535353; */
+  }
+
+@font-face {
+    font-family: descriptionText;
+    src: url(fonts/kingthings-trypewriter-2/Kingthings\ Trypewriter\ 2.ttf);
+}
