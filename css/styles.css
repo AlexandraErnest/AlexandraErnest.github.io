@@ -3415,6 +3415,7 @@ img.u-pull-left {
     object-fit     : cover;
     margin         : 0;
     vertical-align : bottom;
+    width          : 90%; /*changed this up for profile pic - good width*/
 }
 
 .about-info__text {
